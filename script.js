@@ -1,92 +1,98 @@
 let trucks = [
     {
-        number: "Truck #1",
-        status: "In Use",
-        route: "Riyadh to Jeddah",
+        number: 'Truck #1',
+        status: 'In Use',
+        route: 'Riyadh to Jeddah',
         maintenance: 200,
-        driver: "John Doe",
+        driver: 'John Doe',
         income: 5000,
         expenses: 1000,
-        customer: "Customer A",
-        type: "Company Owned", // Added type
+        customer: 'Customer A',
+        type: 'Company Owned', // Added type
         partners: [], // Partners for private trucks
     },
     {
-        number: "Truck #2",
-        status: "Not Allocated",
-        route: "-",
+        number: 'Truck #2',
+        status: 'Not Allocated',
+        route: '-',
         maintenance: 300,
         driver: null,
         income: 1500,
         expenses: 200,
-        customer: "-",
-        type: "Private", // Added type
-        partners: [{ name: "Jane", share: 60 }, { name: "John", share: 40 }], // Added partners
+        customer: '-',
+        type: 'Private', // Added type
+        partners: [
+            { name: 'Jane', share: 60 },
+            { name: 'John', share: 40 },
+        ], // Added partners
     },
     {
-        number: "Truck #3",
-        status: "In Maintenance",
-        route: "Dammam to Riyadh",
+        number: 'Truck #3',
+        status: 'In Maintenance',
+        route: 'Dammam to Riyadh',
         maintenance: 150,
         driver: null,
         income: 0,
         expenses: 0,
-        customer: "-",
-        type: "Company Owned",
+        customer: '-',
+        type: 'Company Owned',
         partners: [],
     },
     {
-        number: "Truck #4",
-        status: "In Use",
-        route: "Jeddah to Dammam",
+        number: 'Truck #4',
+        status: 'In Use',
+        route: 'Jeddah to Dammam',
         maintenance: 250,
-        driver: "Jane Smith",
+        driver: 'Jane Smith',
         income: 6000,
         expenses: 1200,
-        customer: "Customer B",
-        type: "Private",
-        partners: [{ name: "Jeeny", share: 70 }, { name: "Jenny", share: 30 }],
+        customer: 'Customer B',
+        type: 'Private',
+        partners: [
+            { name: 'Jeeny', share: 70 },
+            { name: 'Jenny', share: 30 },
+        ],
     },
     {
-        number: "Truck #5",
-        status: "Not Allocated",
-        route: "-",
+        number: 'Truck #5',
+        status: 'Not Allocated',
+        route: '-',
         maintenance: 100,
         driver: null,
         income: 0,
         expenses: 0,
-        customer: "-",
-        type: "Company Owned",
+        customer: '-',
+        type: 'Company Owned',
         partners: [],
     },
 ];
 let drivers = [
-    { name: "John Doe", license: "License 123", status: "Active", percentage: 10, truck: "Truck #1" },
-    { name: "Jane Smith", license: "License 456", status: "Active", percentage: 12, truck: "Truck #4" },
-    { name: "David Lee", license: "License 789", status: "Inactive", percentage: 8, truck: null },
-    { name: "Alice Johnson", license: "License 101", status: "Active", percentage: 11, truck: null },
-    { name: "Robert Brown", license: "License 202", status: "Active", percentage: 9, truck: null },
+    { name: 'John Doe', license: 'License 123', status: 'Active', percentage: 10, truck: 'Truck #1' },
+    { name: 'Jane Smith', license: 'License 456', status: 'Active', percentage: 12, truck: 'Truck #4' },
+    { name: 'David Lee', license: 'License 789', status: 'Inactive', percentage: 8, truck: null },
+    { name: 'Alice Johnson', license: 'License 101', status: 'Active', percentage: 11, truck: null },
+    { name: 'Robert Brown', license: 'License 202', status: 'Active', percentage: 9, truck: null },
 ];
 
 let expenses = [
-    { truck: "Truck #1", type: "Fuel", amount: 500, percentage: 5 },
-    { truck: "Truck #2", type: "Repairs", amount: 300, percentage: 6 },
-    { truck: "Truck #1", type: "Tolls", amount: 100, percentage: 1 },
-    { truck: "Truck #4", type: "Fuel", amount: 600, percentage: 5 },
-    { truck: "Truck #2", type: "Maintenance", amount: 200, percentage: 3 },
+    { truck: 'Truck #1', type: 'Fuel', amount: 500, percentage: 5 },
+    { truck: 'Truck #2', type: 'Repairs', amount: 300, percentage: 6 },
+    { truck: 'Truck #1', type: 'Tolls', amount: 100, percentage: 1 },
+    { truck: 'Truck #4', type: 'Fuel', amount: 600, percentage: 5 },
+    { truck: 'Truck #2', type: 'Maintenance', amount: 200, percentage: 3 },
 ];
 
 let customers = [
-    { name: "Customer A", contact: "contact@customera.com" },
-    { name: "Customer B", contact: "contact@customerb.com" },
-    { name: "Customer C", contact: "contact@customerc.com" },
-    { name: "Customer D", contact: "contact@customerd.com" },
-    { name: "Customer E", contact: "contact@customere.com" },
-    { name: "Customer F", contact: "contact@customerf.com" },
-    { name: "Customer G", contact: "contact@customerg.com" },
-    { name: "Customer H", contact: "contact@customerh.com" },
-    { name: "Customer I", contact: "contact@customeri.com" },
-    { name: "Customer J", contact: "contact@customerj.com" },
+    { name: 'Customer A', contact: 'contact@customera.com' },
+    { name: 'Customer B', contact: 'contact@customerb.com' },
+    { name: 'Customer C', contact: 'contact@customerc.com' },
+    { name: 'Customer D', contact: 'contact@customerd.com' },
+    { name: 'Customer E', contact: 'contact@customere.com' },
+    { name: 'Customer F', contact: 'contact@customerf.com' },
+    { name: 'Customer G', contact: 'contact@customerg.com' },
+    { name: 'Customer H', contact: 'contact@customerh.com' },
+    { name: 'Customer I', contact: 'contact@customeri.com' },
+    { name: 'Customer J', contact: 'contact@customerj.com' },
 ];
 
 // Function to update truck table
@@ -98,28 +104,34 @@ function updateTruckTable() {
         let status = truck.status;
         if (truck.driver) {
             status = 'In Use';
-        } else if (truck.status !== "In Maintenance") {
-            status = "Not Allocated";
+        } else if (truck.status !== 'In Maintenance') {
+            status = 'Not Allocated';
         }
 
         const netProfit = truck.income - truck.expenses;
 
         let partnerCount = truck.partners.length;
-        let partnerShares = truck.partners.map(partner => `${partner.name}: ${partner.share}%`).join(', ');
+        let partnerShares = truck.partners.map((partner) => `${partner.name}: ${partner.share}%`).join(', ');
 
         if (partnerCount === 0) {
             partnerCount = '-';
             partnerShares = '-';
         }
 
-        const availableDrivers = drivers.filter(driver => {
-            return !trucks.some(t => t.driver === driver.name && t.number !== truck.number);
+        const availableDrivers = drivers.filter((driver) => {
+            return !trucks.some((t) => t.driver === driver.name && t.number !== truck.number);
         });
 
-        newRow.innerHTML = `
+        newRow.isnnerHTML = `
             <td>${truck.number}</td>
             <td>${truck.type}</td>
-            <td class="status-cell ${status === 'In Use' ? 'status-in-use' : status === 'Not Allocated' ? 'status-not-allocated' : 'status-in-maintenance'}">${status}</td>
+            <td class="status-cell ${
+                status === 'In Use'
+                    ? 'status-in-use'
+                    : status === 'Not Allocated'
+                    ? 'status-not-allocated'
+                    : 'status-in-maintenance'
+            }">${status}</td>
             <td>${truck.route}</td>
             <td>$${truck.maintenance}</td>
             <td>${truck.driver || '-'}</td>
@@ -133,15 +145,28 @@ function updateTruckTable() {
                 <div id="editTruck-${index}" style="display: none;">
                     <select id="editStatus-${index}" onchange="enableSave(${index})">
                         <option value="${status}" disabled selected class="disabled-option">${status}</option>
-                        ${["In Use","Not Allocated","In Maintenance"].filter(s => s !== status).map(s => `<option value="${s}">${s}</option>`).join('')}
+                        ${['In Use', 'Not Allocated', 'In Maintenance']
+                            .filter((s) => s !== status)
+                            .map((s) => `<option value="${s}">${s}</option>`)
+                            .join('')}
                     </select>
                     <select id="editDriver-${index}" onchange="enableSave(${index})">
-                        <option value="${truck.driver || ''}" disabled selected class="disabled-option">${truck.driver || "Select Driver"}</option>
-                        ${availableDrivers.filter(driver => driver.name !== truck.driver).map(driver => `<option value="${driver.name}">${driver.name}</option>`).join('')}
+                        <option value="${truck.driver || ''}" disabled selected class="disabled-option">${
+            truck.driver || 'Select Driver'
+        }</option>
+                        ${availableDrivers
+                            .filter((driver) => driver.name !== truck.driver)
+                            .map((driver) => `<option value="${driver.name}">${driver.name}</option>`)
+                            .join('')}
                     </select>
                     <select id="editCustomer-${index}" onchange="enableSave(${index})">
-                        <option value="${truck.customer || ''}" disabled selected class="disabled-option">${truck.customer || "Select Customer"}</option>
-                        ${customers.filter(customer => customer.name !== truck.customer).map(customer => `<option value="${customer.name}">${customer.name}</option>`).join('')}
+                        <option value="${truck.customer || ''}" disabled selected class="disabled-option">${
+            truck.customer || 'Select Customer'
+        }</option>
+                        ${customers
+                            .filter((customer) => customer.name !== truck.customer)
+                            .map((customer) => `<option value="${customer.name}">${customer.name}</option>`)
+                            .join('')}
                     </select>
                     <button id="saveButton-${index}" onclick="saveTruckChanges(${index})" disabled style="cursor: not-allowed;">Save</button>
                 </div>
@@ -166,12 +191,12 @@ function enableSave(index) {
     const newCustomer = document.getElementById(`editCustomer-${index}`).value;
     const saveButton = document.getElementById(`saveButton-${index}`);
 
-    if (newStatus === "In Use" && (!newDriver || !newCustomer || newCustomer === "")) {
+    if (newStatus === 'In Use' && (!newDriver || !newCustomer || newCustomer === '')) {
         saveButton.disabled = true;
-        saveButton.style.cursor = "not-allowed";
+        saveButton.style.cursor = 'not-allowed';
     } else {
         saveButton.disabled = false;
-        saveButton.style.cursor = "pointer";
+        saveButton.style.cursor = 'pointer';
     }
 }
 function saveTruckChanges(index) {
@@ -179,21 +204,21 @@ function saveTruckChanges(index) {
     const newDriver = document.getElementById(`editDriver-${index}`).value;
     const newCustomer = document.getElementById(`editCustomer-${index}`).value;
 
-    if (newStatus === "In Use" && (!newDriver || !newCustomer)) {
-        alert("Please fill all the required fields: Driver and Customer.");
+    if (newStatus === 'In Use' && (!newDriver || !newCustomer)) {
+        alert('Please fill all the required fields: Driver and Customer.');
         return; // Prevent saving if driver or customer is missing
     }
 
     trucks[index].status = newStatus;
 
-    if (newStatus === "In Maintenance" || newStatus === "Not Allocated") {
+    if (newStatus === 'In Maintenance' || newStatus === 'Not Allocated') {
         trucks[index].driver = null;
-        trucks[index].customer = "-";
+        trucks[index].customer = '-';
     } else {
         trucks[index].driver = newDriver || null;
-        trucks[index].customer = newCustomer || "-";
+        trucks[index].customer = newCustomer || '-';
         if (newDriver) {
-            trucks[index].status = "In Use";
+            trucks[index].status = 'In Use';
         }
     }
 
@@ -205,9 +230,11 @@ function saveTruckChanges(index) {
 function updateDriverTable() {
     const driverTable = document.getElementById('driverTable');
     driverTable.innerHTML = `<tr><th>Driver Name</th><th>License</th><th>Status</th><th>Income Percentage</th><th>Truck</th></tr>`;
-    drivers.forEach(driver => {
+    drivers.forEach((driver) => {
         const newRow = driverTable.insertRow(-1);
-        newRow.innerHTML = `<td>${driver.name}</td><td>${driver.license}</td><td>${driver.status}</td><td>${driver.percentage}%</td><td>${driver.truck || '-'}</td>`;
+        newRow.innerHTML = `<td>${driver.name}</td><td>${driver.license}</td><td>${driver.status}</td><td>${
+            driver.percentage
+        }%</td><td>${driver.truck || '-'}</td>`;
     });
     updateAllocateDriverSelect();
 }
@@ -216,7 +243,7 @@ function updateDriverTable() {
 function updateExpenseTable() {
     const expenseTable = document.getElementById('expenseTable');
     expenseTable.innerHTML = `<tr><th>Truck</th><th>Expense Type</th><th>Amount</th><th>Percentage of Income (Tax)</th></tr>`;
-    expenses.forEach(expense => {
+    expenses.forEach((expense) => {
         const newRow = expenseTable.insertRow(-1);
         newRow.innerHTML = `<td>${expense.truck}</td><td>${expense.type}</td><td>$${expense.amount}</td><td>${expense.percentage}%</td>`;
     });
@@ -235,57 +262,68 @@ function updateCustomerTable() {
 
 // Function to add a truck
 function addTruck() {
-    const number = prompt("Enter Truck Number:");
-    const type = prompt("Enter Truck Type (Company Owned/Private):");
-    const status = prompt("Enter Truck Status:");
-    const route = prompt("Enter Truck Route:");
-    const maintenance = prompt("Enter Maintenance Expenses:");
+    const number = prompt('Enter Truck Number:');
+    const type = prompt('Enter Truck Type (Company Owned/Private):');
+    const status = prompt('Enter Truck Status:');
+    const route = prompt('Enter Truck Route:');
+    const maintenance = prompt('Enter Maintenance Expenses:');
 
     if (number && status && route && maintenance && type) {
         let partners = [];
-        if(type.toLowerCase() === "private"){
-            let partnerCount = parseInt(prompt("Enter number of partners:"));
-            for(let i = 0; i<partnerCount; i++){
-                let name = prompt(`Enter partner ${i+1} name:`);
-                let share = parseFloat(prompt(`Enter partner ${i+1} share: `));
-                partners.push({name, share});
+        if (type.toLowerCase() === 'private') {
+            let partnerCount = parseInt(prompt('Enter number of partners:'));
+            for (let i = 0; i < partnerCount; i++) {
+                let name = prompt(`Enter partner ${i + 1} name:`);
+                let share = parseFloat(prompt(`Enter partner ${i + 1} share: `));
+                partners.push({ name, share });
             }
         }
 
-        trucks.push({ number, status, route, maintenance: parseFloat(maintenance), driver: null, income: 0, expenses: 0, customer: "-", type, partners });
+        trucks.push({
+            number,
+            status,
+            route,
+            maintenance: parseFloat(maintenance),
+            driver: null,
+            income: 0,
+            expenses: 0,
+            customer: '-',
+            type,
+            partners,
+        });
         updateTruckTable();
     } else {
-        alert("Please enter all truck details.");
+        alert('Please enter all truck details.');
     }
 }
 
 // Function to add a driver
 function addDriver() {
-    const name = prompt("Enter Driver Name:");
-    const license = prompt("Enter License Number:");
-    const status = prompt("Enter Driver Status:");
-    const percentage = prompt("Enter Income Percentage:");
+    const name = prompt('Enter Driver Name:');
+    const license = prompt('Enter License Number:');
+    const status = prompt('Enter Driver Status:');
+    const percentage = prompt('Enter Income Percentage:');
 
     if (name && license && status && percentage) {
         drivers.push({ name, license, status, percentage: parseFloat(percentage), truck: null });
         updateDriverTable();
     } else {
-        alert("Please enter all driver details.");
+        alert('Please enter all driver details.');
     }
 }
 
 // Function to add an expense
 function addExpense() {
-    const truck = prompt("Enter Truck Number:");
-    const type = prompt("Enter Expense Type:");
-    const amount = prompt("Enter Expense Amount:");
-    const percentage = prompt("Enter Percentage of Income (Tax):");
+    const truck = prompt('Enter Truck Number:');
+    const type = prompt('Enter Expense Type:');
+    const amount = prompt('Enter Expense Amount:');
+    const percentage = prompt('Enter Percentage of Income (Tax):');
 
     if (truck && type && amount && percentage) {
         expenses.push({ truck, type, amount: parseFloat(amount), percentage: parseFloat(percentage) });
         updateExpenseTable();
     } else {
-        alert("Please enter all expense details.");
+        alert('Please enter all expense details.');
     }
 }
 
@@ -293,8 +331,8 @@ function addExpense() {
 function updateAllocateTruckSelect() {
     const truckSelect = document.getElementById('truck');
     truckSelect.innerHTML = `<option value="">Select Truck</option>`;
-    trucks.forEach(truck => {
-        if (!truck.driver && truck.status !== "In Maintenance") {
+    trucks.forEach((truck) => {
+        if (!truck.driver && truck.status !== 'In Maintenance') {
             truckSelect.innerHTML += `<option value="${truck.number}">${truck.number}</option>`;
         }
     });
@@ -304,7 +342,7 @@ function updateAllocateTruckSelect() {
 function updateAllocateDriverSelect() {
     const driverSelect = document.getElementById('driver');
     driverSelect.innerHTML = `<option value="">Select Driver</option>`;
-    drivers.forEach(driver => {
+    drivers.forEach((driver) => {
         if (!driver.truck) {
             driverSelect.innerHTML += `<option value="<span class="math-inline"\></span>${driver.name}</option>`;
         }
@@ -316,7 +354,7 @@ function updateAllocateCustomerSelect() {
     const customerSelect = document.getElementById('customer');
     customerSelect.innerHTML = `<option value="">Select Customer
 </option>`;
-    customers.forEach(customer => {
+    customers.forEach((customer) => {
         customerSelect.innerHTML += `<option value="${customer.name}">${customer.name}</option>`;
     });
 }
@@ -327,11 +365,11 @@ document.getElementById('allocateForm').addEventListener('submit', function (eve
     const truckNumber = document.getElementById('truck').value;
     const driverName = document.getElementById('driver').value;
     const customerName = document.getElementById('customer').value;
-    const route = prompt("Enter Route for this truck:");
+    const route = prompt('Enter Route for this truck:');
 
     if (truckNumber && driverName && customerName && route) {
-        const truck = trucks.find(t => t.number === truckNumber);
-        const driver = drivers.find(d => d.name === driverName);
+        const truck = trucks.find((t) => t.number === truckNumber);
+        const driver = drivers.find((d) => d.name === driverName);
 
         if (truck && driver) {
             truck.driver = driverName;
@@ -342,9 +380,11 @@ document.getElementById('allocateForm').addEventListener('submit', function (eve
             updateDriverTable();
             updateAllocateTruckSelect();
             updateAllocateDriverSelect();
-            alert(`Truck ${truckNumber} allocated to driver ${driverName} for customer ${customerName} with route: ${route}.`);
+            alert(
+                `Truck ${truckNumber} allocated to driver ${driverName} for customer ${customerName} with route: ${route}.`
+            );
         } else {
-            alert("Truck or driver not found.");
+            alert('Truck or driver not found.');
         }
     } else {
         alert('Please select a truck, driver, and customer, and enter a route.');
@@ -356,7 +396,7 @@ function updateDashboard() {
     let totalIncome = 0;
     let totalExpenses = 0;
 
-    trucks.forEach(truck => {
+    trucks.forEach((truck) => {
         totalIncome += truck.income;
         totalExpenses += truck.expenses;
     });
@@ -374,7 +414,7 @@ function updateReports() {
     let totalIncome = 0;
     let totalExpenses = 0;
 
-    trucks.forEach(truck => {
+    trucks.forEach((truck) => {
         totalIncome += truck.income;
         totalExpenses += truck.expenses;
     });
@@ -391,7 +431,7 @@ function updateReportExpenseTable() {
     const reportExpenseTable = document.querySelector('#reports table');
     reportExpenseTable.innerHTML = `<tr><th>Truck</th><th>Expense Type</th><th>Amount</th></tr>`;
 
-    expenses.forEach(expense => {
+    expenses.forEach((expense) => {
         const newRow = reportExpenseTable.insertRow(-1);
         newRow.innerHTML = `<td>${expense.truck}</td><td>${expense.type}</td><td>$${expense.amount}</td>`;
     });
@@ -402,8 +442,7 @@ function updateCharts() {
     let totalIncome = 0;
     let totalExpenses = 0;
 
-
-    trucks.forEach(truck => {
+    trucks.forEach((truck) => {
         totalIncome += truck.income;
         totalExpenses += truck.expenses;
     });
@@ -415,22 +454,24 @@ function updateCharts() {
         type: 'bar',
         data: {
             labels: ['Income', 'Expenses', 'Profit'],
-            datasets: [{
-                label: 'Income vs Expenses vs Profit',
-                data: [totalIncome, totalExpenses, totalProfit],
-                backgroundColor: ['#FFEB3B', '#F44336', '#4CAF50'],
-                borderColor: ['#FBC02D', '#D32F2F', '#388E3C'],
-                borderWidth: 1
-            }]
+            datasets: [
+                {
+                    label: 'Income vs Expenses vs Profit',
+                    data: [totalIncome, totalExpenses, totalProfit],
+                    backgroundColor: ['#FFEB3B', '#F44336', '#4CAF50'],
+                    borderColor: ['#FBC02D', '#D32F2F', '#388E3C'],
+                    borderWidth: 1,
+                },
+            ],
         },
         options: {
             responsive: true,
             scales: {
                 y: {
-                    beginAtZero: true
-                }
-            }
-        }
+                    beginAtZero: true,
+                },
+            },
+        },
     });
 
     const ctxIncomeExpense = document.getElementById('incomeExpenseChart').getContext('2d');
@@ -438,21 +479,23 @@ function updateCharts() {
         type: 'pie',
         data: {
             labels: ['Income', 'Expenses', 'Profit'],
-            datasets: [{
-                label: 'Income vs Expenses vs Profit',
-                data: [totalIncome, totalExpenses, totalProfit],
-                backgroundColor: [ '#FFEB3B', '#F44336', '#4CAF50']
-            }]
+            datasets: [
+                {
+                    label: 'Income vs Expenses vs Profit',
+                    data: [totalIncome, totalExpenses, totalProfit],
+                    backgroundColor: ['#FFEB3B', '#F44336', '#4CAF50'],
+                },
+            ],
         },
         options: {
             responsive: true,
-        }
+        },
     });
 }
 
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
-    sections.forEach(section => section.classList.remove('active'));
+    sections.forEach((section) => section.classList.remove('active'));
     const selectedSection = document.getElementById(sectionId);
     selectedSection.classList.add('active');
 }
@@ -473,7 +516,7 @@ document.getElementById('customerForm').addEventListener('submit', function (eve
         document.getElementById('customerName').value = '';
         document.getElementById('customerContact').value = '';
     } else {
-        alert("Please enter both customer name and contact.");
+        alert('Please enter both customer name and contact.');
     }
 });
 
