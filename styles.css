@@ -15,6 +15,8 @@ header {
     padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Center header content */
+    text-align: center; /* Center text in header */
 }
 
 header img {
@@ -26,18 +28,20 @@ nav {
     background-color: #f0f0f0;
     padding: 10px;
     display: flex;
-    justify-content: left;
     flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    justify-content: center; /* Center navigation links */
+    text-align: center; /* Center text in nav */
 }
 
 nav a {
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 8px 12px; /* Reduced padding */
     margin: 5px;
     background-color: #4CAF50;
     color: white;
     border-radius: 5px;
     white-space: nowrap; /* Prevent text from wrapping */
+    font-size: 0.9em; /* Reduced font size */
 }
 
 nav a:hover {
@@ -48,6 +52,7 @@ nav a:hover {
     padding: 20px;
     display: none;
     flex-grow: 1; /* Allow sections to grow and take available space */
+    text-align: center; /* Center content within sections */
 }
 
 .section.active {
@@ -55,15 +60,15 @@ nav a:hover {
 }
 
 table {
-    width: 100%;
+    width: 100%; /* Make table responsive */
     border-collapse: collapse;
-    margin-top: 20px;
+    margin: 20px auto; /* Center table horizontally */
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: center; /* Center table cell content */
 }
 
 th {
@@ -78,6 +83,10 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10px;
+    display: block; /* Make button a block element */
+    margin-left: auto; /* Center button horizontally */
+    margin-right: auto;
+    max-width: 150px; /*set max width of button*/
 }
 
 button:hover {
@@ -85,25 +94,29 @@ button:hover {
 }
 
 .graph-container {
-    width: 500px;
+    width: 100%; /* Make graph container responsive */
     height: 300px;
-    margin-top: 20px;
+    margin: 20px auto; /* Center graph container */
 }
 
 form {
-    display: inline-block;
+    display: block; /* Make form a block element */
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
+    text-align: left; /* Align form elements to the left */
+    margin: 20px auto; /* Center form horizontally */
+    width: 100%; /* Make form responsive */
 }
 
 form label {
     display: block;
     margin-bottom: 5px;
+    text-align: center; /* center form label text */
 }
 
 form input, form select {
-    width: 200px;
+    width: 100%; /* Make inputs responsive */
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
@@ -117,4 +130,52 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: auto; /* Push footer to the bottom */
+}
+
+h2, h3 { /* Center headings */
+    text-align: center;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust for smaller screens */
+    nav a {
+        flex-basis: 100%; /* Make navigation links stack */
+    }
+}
+.graph-container {
+    width: 100%; /* Make graph container responsive */
+    height: 300px;
+    margin: 20px auto; /* Center graph container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-cell {
+    text-align: center; /* Center the status text */
+}
+
+.status-in-use {
+    background-color: lightgreen;
+    color: black;
+}
+
+.status-not-allocated {
+    background-color: lightyellow;
+    color: black;
+}
+
+.status-in-maintenance {
+    background-color: lightcoral;
+    color: white;
+}
+
+.change-status-cell {
+    text-align: center; /* Center the dropdown */
+}
+.disabled-option {
+    color: gray; /* Or any other style to indicate disabled */
+    background-color: #f0f0f0; /* Optional: Light gray background */
+    cursor: not-allowed; /* Optional: Change cursor */
 }
