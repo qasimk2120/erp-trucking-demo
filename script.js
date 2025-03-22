@@ -1,6 +1,3 @@
-// script.js
-
-// Placeholder data (including customers)
 let trucks = [
     { number: "Truck #1", status: "In Use", route: "Riyadh to Jeddah", maintenance: 200, driver: "John Doe", income: 5000, expenses: 1000, customer: "Customer A" },
     { number: "Truck #2", status: "Not Allocated", route: "-", maintenance: 300, driver: null, income: 1500, expenses: 200, customer: "-" },
@@ -78,6 +75,7 @@ function updateExpenseTable() {
         newRow.innerHTML = `<td>${expense.truck}</td><td>${expense.type}</td><td>$${expense.amount}</td><td>${expense.percentage}%</td>`;
     });
 }
+
 // Function to update customer table
 function updateCustomerTable() {
     const customerTable = document.getElementById('customerTable');
@@ -88,6 +86,7 @@ function updateCustomerTable() {
     });
     updateAllocateCustomerSelect();
 }
+
 // Function to add a truck
 function addTruck() {
     const number = prompt("Enter Truck Number:");
@@ -158,7 +157,7 @@ function updateAllocateDriverSelect() {
 // Function to update allocate customer select
 function updateAllocateCustomerSelect() {
     const customerSelect = document.getElementById('customer');
-    customerSelect.innerHTML = `<option value="">Select Customer// script.js (continued)
+    customerSelect.innerHTML = `<option value="">Select Customer
 </option>`;
     customers.forEach(customer => {
         customerSelect.innerHTML += `<option value="${customer.name}">${customer.name}</option>`;
@@ -228,6 +227,17 @@ function updateReports() {
     document.getElementById('reportTotalIncome').textContent = totalIncome.toFixed(2);
     document.getElementById('reportTotalExpenses').textContent = totalExpenses.toFixed(2);
     document.getElementById('reportProfit').textContent = totalProfit.toFixed(2);
+    updateReportExpenseTable(); // Call this here!
+}
+
+function updateReportExpenseTable() {
+    const reportExpenseTable = document.querySelector('#reports table');
+    reportExpenseTable.innerHTML = `<tr><th>Truck</th><th>Expense Type</th><th>Amount</th></tr>`;
+
+    expenses.forEach(expense => {
+        const newRow = reportExpenseTable.insertRow(-1);
+        newRow.innerHTML = `<td>${expense.truck}</td><td>${expense.type}</td><td>$${expense.amount}</td>`;
+    });
 }
 
 // Chart.js setup for profit and income/expense charts from actual data
