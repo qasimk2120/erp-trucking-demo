@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trucking ERP Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="/script.js" alt="Logo">
+        <h1>Trucking ERP Software</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('dashboard')">Dashboard</a>
+        <a href="#" onclick="showSection('trucks')">Trucks</a>
+        <a href="#" onclick="showSection('allocate-trucks')">Allocate Trucks</a>
+        <a href="#" onclick="showSection('drivers')">Drivers</a>
+        <a href="#" onclick="showSection('expenses')">Expenses</a>
+        <a href="#" onclick="showSection('reports')">Reports</a>
+        <a href="#" onclick="showSection('customers')">Customers</a>
+    </nav>
+
+    <div id="dashboard" class="section active">
+        <h2>Dashboard</h2>
+        <p>Total Trucks: <span id="totalTrucks">0</span></p>
+        <p>Total Earnings: $<span id="totalEarnings">0</span></p>
+        <p>Total Expenses: $<span id="totalExpenses">0</span></p>
+        <p>Profit: $<span id="totalProfit">0</span></p>
+
+        <div class="graph-container">
+            <canvas id="profitChart"></canvas>
+        </div>
+    </div>
+
+    <div id="trucks" class="section">
+        <h2>Trucks</h2>
+        <button onclick="addTruck()">Add New Truck</button>
+        <h3>Truck List</h3>
+        <table id="truckTable">
+            <tr>
+                <th>Truck Number</th>
+                <th>Status</th>
+                <th>Route</th>
+                <th>Maintenance Expenses</th>
+                <th>Driver</th>
+                <th>Income</th>
+                <th>Net Profit</th>
+                <th>Customer</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="drivers" class="section">
+        <h2>Drivers</h2>
+        <button onclick="addDriver()">Add New Driver</button>
+        <h3>Driver List</h3>
+        <table id="driverTable">
+            <tr>
+                <th>Driver Name</th>
+                <th>License</th>
+                <th>Status</th>
+                <th>Income Percentage</th>
+                <th>Truck</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="expenses" class="section">
+        <h2>Expenses</h2>
+        <button onclick="addExpense()">Add New Expense</button>
+        <h3>Expense List</h3>
+        <table id="expenseTable">
+            <tr>
+                <th>Truck</th>
+                <th>Expense Type</th>
+                <th>Amount</th>
+                <th>Percentage of Income (Tax)</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="reports" class="section">
+        <h2>Reports</h2>
+        <div>
+            <h3>Monthly Summary</h3>
+            <p>Total Income: $<span id="reportTotalIncome">0</span></p>
+            <p>Total Expenses: $<span id="reportTotalExpenses">0</span></p>
+            <p>Profit: $<span id="reportProfit">0</span></p>
+        </div>
+        <div class="graph-container">
+            <canvas id="incomeExpenseChart"></canvas>
+        </div>
+        <div>
+            <h3>Expense Breakdown</h3>
+            <table>
+            </table>
+        </div>
+    </div>
+
+    <div id="allocate-trucks" class="section">
+        <h2>Allocate Trucks</h2>
+        <form id="allocateForm">
+            <label for="truck">Select Truck:</label>
+            <select id="truck" name="truck" required></select><br><br>
+            <label for="driver">Driver:</label>
+            <select id="driver" name="driver" required></select><br><br>
+            <label for="customer">Customer:</label>
+            <select id="customer" name="customer" required></select><br><br>
+            <button type="submit">Allocate Truck</button>
+        </form>
+    </div>
+
+    <div id="customers" class="section">
+        <h2>Customers</h2>
+        <button onclick="showAddCustomerForm()">Add New Customer</button>
+        <div id="addCustomerForm" style="display:none;">
+            <h3>Add Customer</h3>
+            <form id="customerForm">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName" name="customerName" required><br><br>
+                <label for="customerContact">Contact:</label>
+                <input type="text" id="customerContact" name="customerContact" required><br><br>
+                <button type="submit">Add Customer</button>
+            </form>
+        </div>
+        <h3>Customer List</h3>
+        <table id="customerTable">
+            <tr>
+                <th>Customer Name</th>
+                <th>Contact</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Trucking ERP Software | All rights reserved</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
