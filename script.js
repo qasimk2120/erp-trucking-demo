@@ -122,7 +122,7 @@ function updateTruckTable() {
             return !trucks.some((t) => t.driver === driver.name && t.number !== truck.number);
         });
 
-        newRow.isnnerHTML = `
+        newRow.innerHTML = `
             <td>${truck.number}</td>
             <td>${truck.type}</td>
             <td class="status-cell ${
@@ -175,6 +175,7 @@ function updateTruckTable() {
     });
     updateAllocateTruckSelect();
 }
+
 
 function showEditTruck(index) {
     document.getElementById(`editTruck-${index}`).style.display = 'block';
